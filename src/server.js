@@ -10,7 +10,13 @@ const PORT = Number(process.env.PORT) || 3000;
 
 app.use(cors());
 app.use(express.json());
-app.use(pinoHttp());
+app.use(
+  pinoHttp({
+    transport: {
+      target: 'pino-pretty',
+    },
+  }),
+);
 
 app.get('/notes', (_req, res) => {
   res.status(200).json({ message: 'Retrieved all notes' });
