@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Plan the weekly meeting",
+    "content": "Prepare the agenda and send it to the team.",
+    "tag": "Work"
+  },
+  {
+    "title": "Buy groceries",
+    "content": "Milk, bread, vegetables, and coffee.",
+    "tag": "Shopping"
+  },
+  {
+    "title": "Read a book",
+    "content": "Read at least one chapter before bed.",
+    "tag": "Personal"
+  }
+]
