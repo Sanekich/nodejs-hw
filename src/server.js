@@ -5,7 +5,7 @@ import { connectMongoDB } from './db/connectMongoDB.js';
 import { errorHandler } from './middleware/errorHandler.js';
 import { logger } from './middleware/logger.js';
 import { notFoundHandler } from './middleware/notFoundHandler.js';
-import { notesRouter } from './routes/notesRoutes.js';
+import notesRouter from './routes/notesRoutes.js';
 
 const app = express();
 const port = Number(process.env.PORT) || 3000;
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   res.status(200).json({ message: 'Notes API is running' });
 });
 
-app.use('/notes', notesRouter);
+app.use(notesRouter);
 app.use(notFoundHandler);
 app.use(errorHandler);
 
