@@ -7,7 +7,7 @@ import {
   getAllNotes,
   getNoteById,
   updateNote,
-} from '../controllers/notes.js';
+} from '../controllers/notesController.js';
 import {
   createNoteSchema,
   getAllNotesSchema,
