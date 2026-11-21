@@ -20,10 +20,6 @@ app.use(logger);
 
 app.use(notesRouter);
 
-app.get('/test-error', () => {
-  throw new Error('Simulated server error');
-});
-
 app.use(celebrateErrors());
 app.use(notFoundHandler);
 app.use(errorHandler);
