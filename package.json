@@ -18,10 +18,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@eslint/js": "^9.39.5",
+    "celebrate": "^16.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
-    "@eslint/js": "^9.39.5",
+    "http-errors": "^2.0.1",
+    "mongoose": "^9.12.3",
     "pino-http": "^10.4.0",
     "pino-pretty": "^13.2.0"
   },

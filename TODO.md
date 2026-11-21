@@ -1,12 +1,9 @@
-# Assignment checklist
+# 03-validation checklist
 
-- [x] Express project created as `nodejs-hw`.
-- [x] Branch `01-express` prepared for the assignment.
-- [x] `PORT` loaded through dotenv with a fallback to `3000`.
-- [x] CORS and `express.json()` middleware configured.
-- [x] HTTP logging configured with `pino-http`.
-- [x] 404 middleware returns `{ "message": "Route not found" }`.
-- [x] 500 middleware returns the error message.
-- [x] `GET /notes` implemented.
-- [x] `GET /notes/:noteId` implemented.
-- [x] `GET /test-error` implemented.
+- [x] Work is prepared on branch `03-validation`.
+- [x] MongoDB connection uses `MONGO_URL` from dotenv.
+- [x] Notes model includes the required fields and a tag index.
+- [x] `GET /notes` supports tag filtering, regex text search, and pagination.
+- [x] CRUD routes are implemented for notes.
+- [x] `celebrate` schemas validate query parameters, IDs, create bodies, and update bodies.
+- [x] 404, validation, HTTP, and 500 errors are handled.
