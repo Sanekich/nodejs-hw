@@ -34,7 +34,9 @@ export const noteIdSchema = {
 
 export const createNoteSchema = {
   body: Joi.object({
-    ...noteFields,
+    title: noteFields.title.required(),
+    content: noteFields.content,
+    tag: noteFields.tag,
   }).required(),
 };
 
