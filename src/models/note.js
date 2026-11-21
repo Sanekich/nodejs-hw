@@ -12,11 +12,12 @@ const noteSchema = new mongoose.Schema(
     content: {
       type: String,
       default: '',
+      trim: true,
     },
     tag: {
       type: String,
       enum: TAGS,
-      index: true,
+      default: 'Todo',
     },
   },
   {
@@ -24,5 +25,7 @@ const noteSchema = new mongoose.Schema(
     versionKey: false,
   },
 );
+
+noteSchema.index({ tag: 1 });
 
 export const Note = mongoose.model('Note', noteSchema);

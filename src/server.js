@@ -1,4 +1,5 @@
 import cors from 'cors';
+import { errors as celebrateErrors } from 'celebrate';
 import dotenv from 'dotenv';
 import express from 'express';
 
@@ -17,12 +18,13 @@ app.use(cors());
 app.use(express.json());
 app.use(logger);
 
-app.use('/notes', notesRouter);
+app.use(notesRouter);
 
 app.get('/test-error', () => {
   throw new Error('Simulated server error');
 });
 
+app.use(celebrateErrors());
 app.use(notFoundHandler);
 app.use(errorHandler);
 
